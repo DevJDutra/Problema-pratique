@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle da Academia</title>
+    <link rel="stylesheet" href="styles.css?v=8" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Painel Operacional</p>
+          <h1>Controle de maquinas e mensalidades da academia</h1>
+          <p class="hero-copy">
+            Consulte rapidamente o estado dos equipamentos e verifique se a
+            mensalidade do aluno esta paga ou em atraso.
+          </p>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <div class="card-header">
+            <h2>Status das maquinas</h2>
+            <p>Selecione um equipamento para ver a situacao atual.</p>
+          </div>
+
+          <label class="label" for="machine-select">Maquina</label>
+          <select id="machine-select" class="input">
+            <option value="">Carregando maquinas...</option>
+          </select>
+
+          <button id="machine-button" class="button">Consultar maquina</button>
+
+          <div id="machine-result" class="result muted">
+            Escolha uma maquina para visualizar os detalhes.
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h2>Anotacoes de maquinas</h2>
+            <p>
+              Alunos podem registrar observacoes ou denunciar defeitos para a
+              equipe acompanhar.
+            </p>
+          </div>
+
+          <label class="label" for="note-machine-select">Maquina</label>
+          <select id="note-machine-select" class="input">
+            <option value="">Selecione uma maquina</option>
+          </select>
+
+          <label class="label" for="note-author">Nome do aluno</label>
+          <input
+            id="note-author"
+            class="input"
+            type="text"
+            placeholder="Ex.: Lucas Ferreira"
+          />
+
+          <label class="label" for="note-type">Tipo do relato</label>
+          <select id="note-type" class="input">
+            <option value="anotacao">Anotacao</option>
+            <option value="defeito">Defeito</option>
+          </select>
+
+          <label class="label" for="note-message">Descricao</label>
+          <textarea
+            id="note-message"
+            class="input input-textarea"
+            placeholder="Descreva o problema ou a observacao sobre a maquina"
+          ></textarea>
+
+          <button id="note-button" type="button" class="button">
+            Salvar relato
+          </button>
+
+          <div id="note-result" class="result muted">
+            Registre uma observacao para que ela apareca na consulta da maquina.
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h2>Atualizar status da maquina</h2>
+            <p>Altere dados do equipamento, remova do catalogo ou cadastre uma nova maquina.</p>
+          </div>
+
+          <label class="label" for="machine-action">Acao</label>
+          <select id="machine-action" class="input">
+            <option value="update">Atualizar maquina</option>
+            <option value="create">Catalogar nova maquina</option>
+            <option value="delete">Remover do catalogo</option>
+          </select>
+
+          <div id="status-machine-group">
+            <label class="label" for="status-machine-select">Maquina</label>
+            <select id="status-machine-select" class="input">
+              <option value="">Selecione uma maquina</option>
+            </select>
+          </div>
+
+          <div id="new-machine-group" class="hidden">
+            <label class="label" for="new-machine-name">Nome da nova maquina</label>
+            <input
+              id="new-machine-name"
+              class="input"
+              type="text"
+              placeholder="Ex.: Remada Sentada"
+            />
+          </div>
+
+          <label class="label" for="status-select">Novo status</label>
+          <select id="status-select" class="input">
+            <option value="operando">Operando</option>
+            <option value="com problema">Com problema</option>
+            <option value="fora de servico">Fora de servico</option>
+          </select>
+
+          <label class="label" for="maintenance-date">Data da manutencao</label>
+          <input id="maintenance-date" class="input" type="date" />
+
+          <label class="label" for="equipment-observation">Observacao</label>
+          <textarea
+            id="equipment-observation"
+            class="input input-textarea"
+            placeholder="Descreva o estado atual do equipamento"
+          ></textarea>
+
+          <button id="status-button" type="button" class="button">
+            Salvar status
+          </button>
+
+          <div id="status-result" class="result muted">
+            Escolha uma maquina e um status para atualizar.
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h2>Consulta de mensalidade</h2>
+            <p>Digite a matricula do aluno para verificar o pagamento.</p>
+          </div>
+
+          <label class="label" for="registration-input">Matricula</label>
+          <input
+            id="registration-input"
+            class="input"
+            type="text"
+            placeholder="Ex.: 1002"
+          />
+
+          <button id="payment-button" class="button">Consultar mensalidade</button>
+
+          <div id="payment-result" class="result muted">
+            Informe uma matricula para consultar a situacao da mensalidade.
+          </div>
+        </article>
+
+        <article class="card card-wide">
+          <div class="card-header">
+            <h2>Pessoas presentes agora</h2>
+            <p>
+              Controle manual da quantidade de alunos atualmente dentro da
+              academia.
+            </p>
+          </div>
+
+          <div class="counter-panel">
+            <button id="decrease-button" type="button" class="button button-secondary">
+              Diminuir
+            </button>
+
+            <div class="counter-display">
+              <span class="counter-label">Total no momento</span>
+              <strong id="people-count">0</strong>
+            </div>
+
+            <button id="increase-button" type="button" class="button">Aumentar</button>
+          </div>
+
+          <div id="counter-message" class="result muted">
+            Use os botoes para registrar entradas e saidas de pessoas.
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js?v=8"></script>
+  </body>
+</html>
