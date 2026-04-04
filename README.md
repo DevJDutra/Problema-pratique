@@ -33,7 +33,7 @@ py --version
 4. No terminal, digite o comando abaixo para entrar na pasta do projeto:
 
 ```bash
-cd "{caminho-doprojeto}\projeto pratdeEng-Pratique"
+cd "{caminho-doprojeto}"
 ```
 
 5. Depois, execute:
