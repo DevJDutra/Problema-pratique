@@ -1,5 +1,7 @@
 ﻿# Controle de Academia
+
 !!! 100% do codigo foi feito por IA (codex) !!!
+
 Aplicativo para ajudar no controle da academia, com funcoes de:
 
 - consulta de status das maquinas
