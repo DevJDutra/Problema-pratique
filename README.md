@@ -1,5 +1,4 @@
-## Problema:
-
+## Problema: Falta de controle na pratique, durante os horários de pico (17:00-20:00), no acesso de alunos, controle de mensalidade, horário das aulas e gerenciamento de máquinas.
 
 
 ## Solução-1 (Resumo)
