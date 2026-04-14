@@ -20,11 +20,11 @@ Os pilares desta solução incluem:
 -- Aplicativo de gerenciamento
 Um aplicativo para gerenciar:
 
-   maquinas: As maquinas são fichadas, com status de funcionamento, ultima manutenção e anotações que alunos queiram deixar sobre o aparelho.
+- maquinas: As maquinas são fichadas, com status de funcionamento, ultima manutenção e anotações que alunos queiram deixar sobre o aparelho.
    
-   matriculas: Uma janela de pesquisa de matricula, onde é possivel verificar se a matricula do aluno está ativa ou não.
+- matriculas: Uma janela de pesquisa de matricula, onde é possivel verificar se a matricula do aluno está ativa ou não.
    
-   quantidade de pessoas presentes na academia no momento: Um contador de pessoas que funcione com base na identificação facial que libera a catraca, toda vez que entrar, adiciona 1, toda vez que alguem sair, remove 1 (não temos leitor facial a disposição, então há um botao no projeto para diminuir e aumentar a quantidade de pessoas)
+- quantidade de pessoas presentes na academia no momento: Um contador de pessoas que funcione com base na identificação facial que libera a catraca, toda vez que entrar, adiciona 1, toda vez que alguem sair, remove 1 (não temos leitor facial a disposição, então há um botao no projeto para diminuir e aumentar a quantidade de pessoas)
 
  # Controle de Academia
 
