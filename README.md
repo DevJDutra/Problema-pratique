@@ -5,9 +5,11 @@ Sistema de Gestão e Fluxo de Academias:
 Proposta de Solução:
 
 -- Otimização de Espaço e Agendamento Externo
+
 Em cenários de academias com alta densidade de alunos, um dos maiores desafios não é apenas o número de usuários, mas a falta de coordenação entre alunos regulares e personal trainers externos. O uso simultâneo de múltiplos equipamentos por consultorias particulares, sem um controle de horários, gera gargalos que prejudicam a experiência de todos.
 
 -- Inteligência na Escala de Profissionais
+
 Esta proposta foca na organização logística como ferramenta de descompressão do ambiente. A hipótese central é que, ao monitorar e agendar a presença de profissionais externos, é possível redistribuir a carga de uso das máquinas de forma equilibrada ao longo do dia.
 Os pilares desta solução incluem:
 
